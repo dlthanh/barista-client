@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 700;
+}
+em {
+    font-style: italic;
+}
+
+img, video {
+    vertical-align: middle;
+}
+
+html, body {
+    font-family: 'Barista', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    width: get-vw(235px);
+    font-size: get-vw(24px);
+    line-height: get-vw(50px);
+    border-radius: 4px;
+    text-align: center;
+    color: $white;
+    font-weight: 700;
+    &Red {
+        background-color: $brand-color;
+    }
+    &Gray {
+        background-color: #525252;
+    }
+    &:not(:last-child) {
+        margin-right: get-vw(35px);
+    }
+}

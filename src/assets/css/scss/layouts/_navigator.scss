@@ -1,0 +1,26 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1003;
+    background-color: $white;
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+    &-route {
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        li {
+            &:not(:first-child) {
+                margin-left: 80px;
+            }
+            a {
+                color: $black;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.header {
+    background-color: $black;
+    color: $gray;
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        height: 50px;
+        line-height: 50px;
+    }
+    a {
+        color: $gray;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        li:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    i {
+        font-size: 14px;
+    }
+}
