@@ -15,6 +15,7 @@
             </div>
         </div>
         <home-video></home-video>
+        <home-comment></home-comment>
     </div>
 </template>
 
@@ -25,6 +26,7 @@ import Partner from './pages/home/Partner'
 import Course from './pages/home/Course'
 import Calendar from './pages/home/Calendar'
 import Video from './pages/home/Video'
+import Comment from './pages/home/Comment'
 
 export default {
     components: {
@@ -33,7 +35,8 @@ export default {
         'home-partner': Partner,
         'home-course': Course,
         'home-calendar': Calendar,
-        'home-video': Video
+        'home-video': Video,
+        'home-comment': Comment
     }
 }
 </script>
