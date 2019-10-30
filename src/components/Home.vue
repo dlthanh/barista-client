@@ -37,6 +37,9 @@ export default {
         'home-calendar': Calendar,
         'home-video': Video,
         'home-comment': Comment
+    },
+    mounted() {
+        document.title = 'Trang chủ | Trung tâm đào tạo Barista Skills';
     }
 }
 </script>
