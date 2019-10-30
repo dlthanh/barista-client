@@ -9,7 +9,7 @@
 
             <ul class="nav-route">
                 <li>
-                    <router-link :to="'#'">Khóa học</router-link>
+                    <router-link :to="{name: 'course'}">Khóa học</router-link>
                 </li>
                 <li>
                     <router-link :to="'#'">Nguyên liệu</router-link>

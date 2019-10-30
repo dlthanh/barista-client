@@ -1,7 +1,7 @@
 <template>
     <div class="hero">
         <div class="hero-video">
-            <video src="../../../assets/videos/barista_video.mp4" autoplay muted></video>
+            <video src="../../../assets/videos/barista_video.mp4" autoplay muted loop></video>
 
             <div class="hero-video--button">
                 <a href="javascript:;" @click="changeVolumn()"><i class="fas fa-volume-mute"></i></a>
