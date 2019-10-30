@@ -7,9 +7,11 @@ import 'swiper/dist/css/swiper.css'
 import VCalendar from 'v-calendar';
 import Header from './components/layouts/Header'
 import Navigator from './components/layouts/Navigator'
+import Footer from './components/layouts/Footer'
 
 Vue.component('b-header', Header)
 Vue.component('b-nav', Navigator)
+Vue.component('b-footer', Footer)
 
 Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)

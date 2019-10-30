@@ -3,6 +3,7 @@
         <b-header :contact="contact"></b-header>
         <b-nav></b-nav>
         <router-view></router-view>
+        <b-footer :contact="contact"></b-footer>
     </div>
 </template>
 

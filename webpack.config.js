@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'scripts.js'
+    filename: 'scripts.js?[hash]'
   },
   module: {
     rules: [
@@ -64,7 +64,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name].[ext]?[hash]',
           outputPath: 'images/'
         }
       },
@@ -72,7 +72,7 @@ module.exports = {
         test: /\.(mp4)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name].[ext]?[hash]',
           outputPath: 'videos/'
         }
       },
@@ -82,7 +82,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
+              name: '[name].[ext]?[hash]',
               outputPath: 'fonts/'
             }
           }
@@ -92,7 +92,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: '[name].css?[hash]',
       allChunks: true,
     }),
   ],
