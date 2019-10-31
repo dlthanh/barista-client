@@ -1,0 +1,39 @@
+#articles {
+    .banner {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            top: 0;
+            h1 {
+                margin-left: auto;
+                width: get-vw(610px);
+                span {
+                    &::after {
+                        height: 1px;
+                        display: block;
+                        width: 50%;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        &-description {
+            margin-left: auto;
+        }
+    }
+    .articles {
+        &-main {
+            margin-top: get-vw(100px);
+        }
+        &-wrapper {
+            .btn-group {
+                .btn {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

@@ -39,7 +39,7 @@ export default {
         'home-comment': Comment
     },
     mounted() {
-        document.title = 'Trang chủ | Trung tâm đào tạo pha chế Barista Skills'
+        document.title = 'Trang chủ | ' + this.$defaultTile
     }
 }
 </script>

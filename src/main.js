@@ -19,6 +19,8 @@ Vue.use(VCalendar, {
   componentPrefix: 'vc',
 });
 
+Vue.prototype.$defaultTile = 'Trung tâm đào tạo pha chế Barista Skills'
+
 new Vue({
   el: '#app',
   router,

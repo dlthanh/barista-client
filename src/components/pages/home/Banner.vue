@@ -23,7 +23,7 @@
                 <router-link :to="'#'" class="btn btnGray">Xem chi tiết</router-link>
             </div>
 
-            <div class="hero-list">
+            <!-- <div class="hero-list">
                 <swiper :options="swiperHeroOption">
                     <swiper-slide class="hero-item" v-for="(slide, index) in swiperHeroSlides" :key="index">
                         <div class="hero-item--thumb">
@@ -35,7 +35,7 @@
                         </div>
                     </swiper-slide>
                 </swiper>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
