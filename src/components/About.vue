@@ -70,6 +70,8 @@
                 <img :src="require('../assets/images/about-gallery-5.jpg')" alt="">
             </div>
         </div>
+
+        <b-contact></b-contact>
     </div>
 </template>
 

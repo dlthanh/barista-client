@@ -56,6 +56,8 @@
                 </ul>
             </div>
         </div>
+
+        <b-contact></b-contact>
     </div>
 </template>
 

@@ -169,6 +169,8 @@
                     </div>
                 </div>
             </div>
+
+            <b-payment></b-payment>
         </div>
     </div>
 </template>
