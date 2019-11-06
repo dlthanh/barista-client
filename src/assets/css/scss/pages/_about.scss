@@ -1,0 +1,141 @@
+#about {
+    .banner {
+        height: 800px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0, -50%);
+            color: $white;
+            z-index: 1;
+            h1 {
+                font-size: 64px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                span {
+                    color: $red;
+                    text-transform: uppercase;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 350px;
+                    height: 1px;
+                    background-color: $white;
+                    margin-top: 30px;
+                }
+            }
+            p {
+                line-height: 1.3;
+            }
+        }
+    }
+
+    .quote {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 70px auto;
+        &-image {
+            padding-left: 60px;
+            padding-right: 100px;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        &-content {
+            width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &-name {
+            padding-top: 50px;
+            background: url('/client/images/quote.svg') no-repeat top right;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+        &-item {
+            box-shadow: 3px 5px 5px rgba($black, 0.15);
+            width: calc(50% - 15px);
+            margin-bottom: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            p {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                font-size: 36px;
+                line-height: 44px;
+                margin-top: -22px;
+                text-align: center;
+                color: $white;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        &-item {
+            // margin-right: 24px;
+            margin-bottom: 24px;
+            height: 310px;    
+            overflow: hidden;
+            &:nth-child(1) {
+                width: percentage(451/1200);
+            }
+            &:nth-child(2) {
+                width: percentage(324/1200);
+            }
+            &:nth-child(3) {
+                width: percentage(373/1200);
+            }
+            &:nth-child(4) {
+                width: percentage(581/1200);
+            }
+            &:nth-child(5) {
+                width: percentage(595/1200);
+            }
+            &:nth-child(3),
+            &:nth-child(5) {
+                margin-right: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -2,8 +2,8 @@
 @import 'fonts';
 @import 'reset';
 @import 'variables';
-@import 'mixin';
 @import 'functions';
+@import 'mixin';
 @import 'common';
 @import 'layouts/header';
 @import 'layouts/navigator';
@@ -11,5 +11,5 @@
 @import 'pages/home';
 @import 'pages/course';
 @import 'pages/article';
-// @import 'pages/about';
-// @import 'pages/contact';
+@import 'pages/about';
+@import 'pages/contact';

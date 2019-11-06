@@ -19,17 +19,41 @@
 
                 <div class="articles-list">
                     <div class="articles-item" v-for="(article, index) in articles" :key="index">
-                        <a href="#" class="articles-item--thumb">
+                        <router-link :to="{name: 'article-detail'}" class="articles-item--thumb">
                             <img :src="require('../assets/images/course-item-1.jpg')" alt="">
-                        </a>
+                        </router-link>
 
                         <p class="articles-item--category">{{article.category}}</p>
 
-                        <a href="#" class="articles-item--title">{{article.title}}</a>
+                        <router-link :to="{name: 'article-detail'}" class="articles-item--title">{{article.title}}</router-link>
 
                         <p class="articles-item--description">{{article.description}}</p>
                     </div>
                 </div>
+
+                <ul class="articles-pagin">
+                    <li class="articles-pagin--item">
+                        <a href="#"><i class="fal fa-chevron-left"></i></a>
+                    </li>
+                    <li class="articles-pagin--item active">
+                        <a href="#">1</a>
+                    </li>
+                    <li class="articles-pagin--item">
+                        <a href="#">2</a>
+                    </li>
+                    <li class="articles-pagin--item">
+                        <a href="#">3</a>
+                    </li>
+                    <li class="articles-pagin--item">
+                        <a href="#">4</a>
+                    </li>
+                    <li class="articles-pagin--item">
+                        <a href="#">5</a>
+                    </li>
+                    <li class="articles-pagin--item">
+                        <a href="#"><i class="fal fa-chevron-right"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

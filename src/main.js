@@ -8,10 +8,14 @@ import VCalendar from 'v-calendar';
 import Header from './components/layouts/Header'
 import Navigator from './components/layouts/Navigator'
 import Footer from './components/layouts/Footer'
+import Contact from './components/layouts/Contact'
+import Payment from './components/layouts/Payment'
 
 Vue.component('b-header', Header)
 Vue.component('b-nav', Navigator)
 Vue.component('b-footer', Footer)
+Vue.component('b-contact', Contact)
+Vue.component('b-payment', Payment)
 
 Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)

@@ -21,10 +21,10 @@
                     <router-link :to="{name: 'articles'}">Tin tức</router-link>
                 </li>
                 <li>
-                    <router-link :to="'#'">Về chúng tôi</router-link>
+                    <router-link :to="{name: 'about'}">Về chúng tôi</router-link>
                 </li>
                 <li>
-                    <router-link :to="'#'">Liên hệ</router-link>
+                    <router-link :to="{name: 'contact'}">Liên hệ</router-link>
                 </li>
             </ul>
         </div>

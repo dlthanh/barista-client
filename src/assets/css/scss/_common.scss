@@ -117,3 +117,44 @@ a {
         margin-top: 15px;
     }
 }
+
+.contact {
+    & &-wrapper {
+        margin-top: get-vw(80px);
+        padding-top: get-vw(80px);
+        border-top: solid 1px #c4c4c4;
+    }
+    & &-title {
+        font-size: get-vw(36px);
+        font-weight: bold;
+        text-align: center;
+    }
+    & &-list {
+        margin-top: get-vw(80px);
+        display: flex;
+        justify-content: space-between;
+    }
+    & &-item {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.payment {
+    &-wrapper {
+        margin-top: get-vw(80px);
+    }
+    &-title {
+        font-size: get-vw(48px);
+        font-weight: bold;
+    }
+    &-description {
+        font-size: get-vw(18px);
+        line-height: get-vw(22px);
+        font-weight: 300;
+    }
+    &-main {
+        margin-top: get-vw(60px);
+    }
+}

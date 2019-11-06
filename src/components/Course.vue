@@ -18,11 +18,13 @@
 
                     <div class="btn-group">
                         <a href="javascript:;" class="btn btnRed">Đăng ký ngay</a>
-                        <router-link :to="'/course-detail'" class="btn btnWhite">Tìm hiểm thêm</router-link>
+                        <router-link :to="{name: 'course-detail'}" class="btn btnWhite">Tìm hiểm thêm</router-link>
                     </div>
                 </div>
             </div>
         </div>
+
+        <b-payment></b-payment>
     </div>
 </template>
 

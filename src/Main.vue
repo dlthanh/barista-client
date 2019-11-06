@@ -2,7 +2,7 @@
     <div id="barista-skills">
         <b-header :contact="contact"></b-header>
         <b-nav></b-nav>
-        <router-view></router-view>
+        <router-view :contact="contact"></router-view>
         <b-footer :contact="contact"></b-footer>
     </div>
 </template>
