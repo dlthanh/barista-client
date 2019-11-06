@@ -16,6 +16,7 @@
         </div>
         <home-video></home-video>
         <home-comment></home-comment>
+        <b-contact></b-contact>
     </div>
 </template>
 

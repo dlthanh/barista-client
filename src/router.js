@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Course from './components/Course'
 import CourseDetail from './components/CourseDetail'
 import Articles from './components/Articles'
+import ArticleDetail from './components/ArticleDetail'
 
 const router = new VueRouter({
     mode: 'history',
@@ -25,7 +26,7 @@ const router = new VueRouter({
             component: Course
         },
         {
-            path: '/course-detail',
+            path: '/course/detail',
             name: 'course-detail',
             component: CourseDetail
         },
@@ -33,6 +34,11 @@ const router = new VueRouter({
             path: '/articles',
             name: 'articles',
             component: Articles
+        },
+        {
+            path: '/article/detail',
+            name: 'article-detail',
+            component: ArticleDetail
         }
     ]
 })

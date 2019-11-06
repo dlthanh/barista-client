@@ -117,3 +117,26 @@ a {
         margin-top: 15px;
     }
 }
+
+.contact {
+    &-wrapper {
+        margin-top: get-vw(80px);
+        padding-top: get-vw(80px);
+        border-top: solid 1px #c4c4c4;
+    }
+    &-title {
+        font-size: get-vw(36px);
+        font-weight: bold;
+        text-align: center;
+    }
+    &-list {
+        margin-top: get-vw(80px);
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        img {
+            max-width: 100%;
+        }
+    }
+}
