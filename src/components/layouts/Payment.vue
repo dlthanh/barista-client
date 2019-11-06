@@ -25,6 +25,33 @@
 
                 <div class="payment-right">
                     <div class="payment-right--title">Hoặc để lại thông tin, chúng tôi sẽ trực tiếp liên hệ với bạn!</div>
+
+                    <div class="payment-form">
+                        <div class="payment-form--group flex">
+                            <div class="payment-form--column">
+                                <label>Họ tên</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="payment-form--column">
+                                <label>Số điện thoại</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="payment-form--group">
+                            <label>Email</label>
+                            <input type="text">
+                        </div>
+
+                        <a href="#" class="payment-submit">Đăng ký ngay</a>
+                    </div>
+
+                    <div class="payment-notice">
+                        <p><em>*Bộ phận CSKH của Barista Skills sẽ liên lạc với bạn ngay sau khi nhận được thông tin của bạn</em></p>
+
+                        <p>*Mọi thắc mắc về khóa học cần tư vấn, vui lòng gọi đến HOTLINE : <strong>Mr Hoàn: 0988 055 852</strong></p>
+                    </div>
                 </div>
             </div>
         </div>

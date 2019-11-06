@@ -156,5 +156,98 @@ a {
     }
     &-main {
         margin-top: get-vw(60px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left {
+        width: calc(50% - 15px);
+        &--order {
+            font-size: get-vw(96px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #c4c4c4;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            &::after {
+                content: '';
+                display: inline-block;
+                height: 1px;
+                width: calc(100% - 130px);
+                background-color: #c4c4c4;
+            }
+        }
+        &--info {
+            font-size: 18px;
+            line-height: 22px;
+            span {
+                color: $brand-color;
+                font-weight: 700;
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &-right {
+        width: calc(50% - 15px);
+        &--title {
+            font-size: get-vw(36px);
+            line-height: get-vw(44px);
+            margin-bottom: 30px;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #c4c4c4;
+                margin-top: 10px;
+            }
+        }
+    }
+    &-form {
+        &--group {
+            margin-bottom: 20px;
+            &.flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input {
+                height: 36px;
+                line-height: 36px;
+                border-radius: 4px;
+                border: solid 1px #c4c4c4;
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+        &--column {
+            width: calc(50% - 15px);
+        }
+    }
+    &-submit {
+        display: block;
+        width: 50%;
+        height: 36px;
+        line-height: 36px;
+        color: $white;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: $brand-color;
+        text-align: center;
+    }
+    &-notice {
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 17px;
+        p {
+            margin-bottom: 25px;
+        }
     }
 }
