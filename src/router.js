@@ -38,17 +38,17 @@ const router = new VueRouter({
             component: Course
         },
         {
-            path: '/course/detail',
+            path: '/course/:id',
             name: 'course-detail',
             component: CourseDetail
         },
         {
-            path: '/articles',
-            name: 'articles',
+            path: '/category',
+            name: 'category',
             component: Articles
         },
         {
-            path: '/article/detail',
+            path: '/article/:id',
             name: 'article-detail',
             component: ArticleDetail
         }

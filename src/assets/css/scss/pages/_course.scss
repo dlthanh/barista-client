@@ -201,9 +201,17 @@
             margin-top: 5px;
             font-weight: 300;
         }
-        video {
-            margin-top: get-vw(45px);
-            width: 100%;
+        &--video {
+            margin-top: get-vw(60px);
+            position: relative;
+            padding-bottom: 56.25%;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
         }
         &--list {
             margin-top: get-vw(60px);
@@ -223,6 +231,16 @@
         .btn-group {
             margin-top: get-vw(60px);
             text-align: center;
+        }
+    }
+    &-gallery {
+        margin-top: get-vw(60px);
+        &--item {
+            &-thumb {
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
     &-main {
@@ -261,7 +279,7 @@
                 margin-bottom: 15px;
             }
             &__content {
-                li {
+                p {
                     font-size: 18px;
                     line-height: 22px;
                     margin-bottom: 15px;

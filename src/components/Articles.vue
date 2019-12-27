@@ -12,26 +12,26 @@
         <div class="articles-main">
             <div class="articles-wrapper container">
                 <div class="btn-group">
-                    <a href="javascript:;" class="btn btnRed">Review & Đánh Giá</a>
-                    <a href="javascript:;" class="btn btnBorder">Chia Sẻ Kiến Thức</a>
-                    <a href="javascript:;" class="btn btnBorder">Công Thức Pha Chế</a>
+                    <a href="javascript:void(0)" class="btn btnRed" @click="changeCategory(1)">Review & Đánh Giá</a>
+                    <a href="javascript:void(0)" class="btn btnBorder" @click="changeCategory(2)">Chia Sẻ Kiến Thức</a>
+                    <a href="javascript:void(0)" class="btn btnBorder" @click="changeCategory(3)">Công Thức Pha Chế</a>
                 </div>
 
                 <div class="articles-list">
                     <div class="articles-item" v-for="(article, index) in articles" :key="index">
-                        <router-link :to="{name: 'article-detail'}" class="articles-item--thumb">
-                            <img :src="require('../assets/images/course-item-1.jpg')" alt="">
+                        <router-link :to="{name: 'article-detail', params: {id: article.id}}" class="articles-item--thumb">
+                            <img :src="assetURL + article.thumbnail" alt="">
                         </router-link>
 
                         <p class="articles-item--category">{{article.category}}</p>
 
-                        <router-link :to="{name: 'article-detail'}" class="articles-item--title">{{article.title}}</router-link>
+                        <router-link :to="{name: 'article-detail', params: {id: article.id}}" class="articles-item--title">{{article.title}}</router-link>
 
                         <p class="articles-item--description">{{article.description}}</p>
                     </div>
                 </div>
 
-                <ul class="articles-pagin">
+                <!-- <ul class="articles-pagin">
                     <li class="articles-pagin--item">
                         <a href="#"><i class="fal fa-chevron-left"></i></a>
                     </li>
@@ -53,7 +53,7 @@
                     <li class="articles-pagin--item">
                         <a href="#"><i class="fal fa-chevron-right"></i></a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
@@ -65,16 +65,34 @@
 export default {
     data() {
         return {
-            articles: [
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-                {category: 'Chia sẻ kiến thức', title: 'Review Cafe Cư Xá', description: '“Thành bại của một thương hiệu cà phê phụ thuộc 100% vào các Barista” . Nếu bạn muốn thương hiệu...'},
-            ]
+            assetURL: this.$asset,
+            articles: '',
+        }
+    },
+    beforeCreate() {
+        this.$http.get(this.$api + '/articles/group/1')
+                    .then(response => {
+                        this.articles = response.data;
+                        return this.articles;
+                    })
+    },
+    mounted() {
+        document.title = 'Tin tức | Trung tâm đào tạo pha chế Barista Skills';
+    },
+    methods: {
+        changeCategory: function(group) {
+            this.$http.get(this.$api + '/articles/group/' + group)
+                    .then(response => {
+                        this.articles = response.data;
+                        return this.articles;
+                    })
+            var btn = document.getElementsByClassName('btn');
+            for(var i = 0; i < btn.length; i++) {
+                btn[i].classList.remove('btnRed');
+                btn[i].classList.add('btnBorder');
+            }
+            event.target.classList.remove('btnBorder');
+            event.target.classList.add('btnRed');
         }
     }
 }

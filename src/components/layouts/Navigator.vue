@@ -18,7 +18,7 @@
                     <router-link :to="'#'">Dịch vụ & Tư vấn</router-link>
                 </li>
                 <li>
-                    <router-link :to="{name: 'articles'}">Tin tức</router-link>
+                    <router-link :to="{name: 'category'}">Tin tức</router-link>
                 </li>
                 <li>
                     <router-link :to="{name: 'about'}">Về chúng tôi</router-link>

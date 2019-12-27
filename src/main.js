@@ -10,6 +10,7 @@ import Navigator from './components/layouts/Navigator'
 import Footer from './components/layouts/Footer'
 import Contact from './components/layouts/Contact'
 import Payment from './components/layouts/Payment'
+import axios from 'axios'
 
 Vue.component('b-header', Header)
 Vue.component('b-nav', Navigator)
@@ -21,7 +22,18 @@ Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VCalendar, {
   componentPrefix: 'vc',
+  locales: {
+    'vi-VN': {
+      masks: {
+        'L': 'DD-MM-YYYY'
+      }
+    }
+  }
 });
+
+Vue.prototype.$http = axios
+Vue.prototype.$api = 'http://cms.baristaskill.vn:8080/api'
+Vue.prototype.$asset = 'http://cms.baristaskill.vn:8080/uploads/'
 
 Vue.prototype.$defaultTile = 'Trung tâm đào tạo pha chế Barista Skills'
 
