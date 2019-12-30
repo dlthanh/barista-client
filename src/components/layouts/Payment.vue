@@ -1,5 +1,5 @@
 <template>
-    <div class="payment">
+    <div class="payment" id="payment">
         <div class="payment-wrapper container">
             <div class="payment-title">Cách Thức Thanh Toán</div>
             <p class="payment-description">Bạn có thể đăng kí học bằng 1 trong 2 cách sau</p>
@@ -30,21 +30,21 @@
                         <div class="payment-form--group flex">
                             <div class="payment-form--column">
                                 <label>Họ tên</label>
-                                <input type="text">
+                                <input type="text" v-model="contactData.name" required>
                             </div>
 
                             <div class="payment-form--column">
                                 <label>Số điện thoại</label>
-                                <input type="text">
+                                <input type="text" v-model="contactData.phone" required>
                             </div>
                         </div>
 
                         <div class="payment-form--group">
                             <label>Email</label>
-                            <input type="text">
+                            <input type="text" v-model="contactData.email" required>
                         </div>
 
-                        <a href="#" class="payment-submit">Đăng ký ngay</a>
+                        <a href="javascript:void(0);" class="payment-submit" @click="submit">Đăng ký ngay</a>
                     </div>
 
                     <div class="payment-notice">
@@ -60,7 +60,24 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            contactData: {
+                name: '',
+                phone: '',
+                email: '',
+                message: ''
+            }
+        }
+    },
+    methods: {
+        submit: function() {
+            this.$http.post(this.$api + '/customer', this.contactData)
+                        .then(response => {
+                            alert(response.data.message)
+                        })
+        }
+    }
 }
 </script>
 

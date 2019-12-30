@@ -17,13 +17,13 @@
 
                 <ul class="footer-list">
                     <li class="footer-item">
-                        <a href="#">Đào tạo pha chế</a>
+                        <a href="#">Đào tạo pha chế chuyên nghiệp</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">Tư vấn và Setup quán</a>
+                        <a href="#">Cung cấp máy móc, dụng cụ, nguyên liệu pha chế</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">Cung cấp nguyên liệu, dụng cụ và máy móc pha chế</a>
+                        <a href="#">Dịch vụ SET-UP cửa hàng</a>
                     </li>
                 </ul>
             </div>

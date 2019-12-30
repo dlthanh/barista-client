@@ -17,7 +17,7 @@
                     <p class="course-item--info">Học phí: {{course.price}} VND/{{course.session}} buổi học/khóa (Thực hành không giới hạn)</p>
 
                     <div class="btn-group">
-                        <a href="javascript:;" class="btn btnRed">Đăng ký ngay</a>
+                        <a href="javascript:void(0);" class="btn btnRed" @click="scrollToContact">Đăng ký ngay</a>
                         <router-link :to="{name: 'course-detail', params: {id: course.id}}" class="btn btnWhite">Tìm hiểm thêm</router-link>
                     </div>
                 </div>
@@ -49,6 +49,12 @@ export default {
                         this.courses = response.data;
                         return this.courses
                     })
+    },
+    methods: {
+        scrollToContact: function() {
+            console.log(document.getElementById('payment').offsetTop)
+            window.scrollTo(0, document.getElementById('payment').offsetTop)
+        }
     }
 }
 </script>

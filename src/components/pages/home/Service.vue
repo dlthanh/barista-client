@@ -5,7 +5,7 @@
             <p class="service-description">Đào Tạo Chuyên Nghiệp - Cầm Tay Chỉ Việc Từ A-Z</p>
 
             <div class="service-list">
-                <div class="service-item" v-for="index in 4" :key="index">
+                <div class="service-item" v-for="index in 3" :key="index">
                     <img :src="require('../../../assets/images/service-' + index + '.png')" alt="">
                 </div>
             </div>

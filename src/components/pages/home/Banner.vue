@@ -19,7 +19,7 @@
             </div>
 
             <div class="btn-group">
-                <a href="javascript:void(0);" class="btn btnRed">Đăng ký ngay</a>
+                <a href="javascript:void(0);" class="btn btnRed" @click="scrollToContact">Đăng ký ngay</a>
                 <router-link :to="'about'" class="btn btnGray">Xem chi tiết</router-link>
             </div>
 

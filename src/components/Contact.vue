@@ -16,7 +16,7 @@
                 <p>{{contact.address}}</p>
 
                 <h3 class="contact-title">Hotline</h3>
-                <p>Tư vấn khóa học: {{contact.phone_first}}</p>
+                <p>Tư vấn khóa học: {{contact.phone_first}} / {{contact.phone_second}}</p>
                 <p>Tư vấn mở quán: {{contact.phone_first}}</p>
                 <p>Tư vấn thiết bị: {{contact.phone_first}}</p>
 
@@ -51,26 +51,26 @@
                     <div class="form-group flex">
                         <div class="form-column">
                             <label><span class="required">*</span> Họ tên</label>
-                            <input type="text">
+                            <input type="text" name="name" required v-model="contactData.name">
                         </div>
 
                         <div class="form-column">
                             <label><span class="required">*</span> Số điện thoại</label>
-                            <input type="text">
+                            <input type="text" name="phone" required v-model="contactData.phone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label><span class="required">*</span> Email</label>
-                        <input type="text">
+                        <input type="email" name="email" required v-model="contactData.email">
                     </div>
 
                     <div class="form-group">
                         <label><span class="required">*</span> Lời nhắn</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea id="" cols="30" rows="10" name="mesage" required v-model="contactData.mesage"></textarea>
                     </div>
 
-                    <a href="javascript:;" class="form-submit">Gửi lời nhắn</a>
+                    <a href="javascript:;" class="form-submit" @click="submit">Gửi lời nhắn</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,25 @@
 
 <script>
 export default {
-    props: ['contact']
+    props: ['contact'],
+    data() {
+        return {
+            contactData: {
+                name: '',
+                phone: '',
+                email: '',
+                message: ''
+            }
+        }
+    },
+    methods: {
+        submit: function() {
+            this.$http.post(this.$api + '/customer', this.contactData)
+                        .then(response => {
+                            alert(response.data.message)
+                        })
+        }
+    }
 }
 </script>
 

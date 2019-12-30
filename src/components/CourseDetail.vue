@@ -17,7 +17,7 @@
                     <p class="cdetail-info--price">Học phí: {{course.price}}VNĐ</p>
                     <div class="btn-group">
                         <router-link :to="{name: 'course'}" class="btn"><i class="fal fa-chevron-left"></i> Các khóa học khác</router-link>
-                        <router-link :to="'/#'" class="btn btnRed">Đăng ký ngay</router-link>
+                        <router-link :to="'/#'" class="btn btnRed" @click="scrollToContact">Đăng ký ngay</router-link>
                     </div>
                     <p class="cdetail-info--note">* Khóa học gồm {{course.session}} buổi học x {{course.time}} tiếng mỗi buổi. Hãy đảm bảo bạn sắp xếp được thời gian.</p>
                 </div>
@@ -155,7 +155,7 @@ export default {
                 slidesPerView: 3,
                 spaceBetween: 20
             },
-            swiperGallerySlides: ''
+            swiperGallerySlides: '',
         }
     },
     beforeCreate() {
@@ -187,7 +187,7 @@ export default {
                 sessionItems[i].classList.remove('hidden')
             }
             event.target.style.display = "none";
-        }
+        },
     }
 }
 </script>

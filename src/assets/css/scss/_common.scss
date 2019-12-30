@@ -17,6 +17,11 @@ img, video {
 
 html, body {
     font-family: 'Barista', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body.locked {
+    overflow: hidden;
 }
 
 a {

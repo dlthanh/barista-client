@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav">
+    <nav class="nav" id="navigator">
         <div class="nav-wrapper container">
             <div class="nav-logo">
                 <router-link :to="{name: 'home'}">
@@ -33,7 +33,16 @@
 
 <script>
 export default {
-
+    mounted() {
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            if(scrollTop > 50) {
+                document.getElementById('navigator').classList.add('fixed')
+            } else {
+                document.getElementById('navigator').classList.remove('fixed')
+            }
+        })
+    }
 }
 </script>
 
