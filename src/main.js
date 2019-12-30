@@ -32,8 +32,8 @@ Vue.use(VCalendar, {
 });
 
 Vue.prototype.$http = axios
-Vue.prototype.$api = 'http://cms.baristaskill.vn:8080/api'
-Vue.prototype.$asset = 'http://cms.baristaskill.vn:8080/uploads/'
+Vue.prototype.$api = 'http://cms.baristaskill.vn/api'
+Vue.prototype.$asset = 'http://cms.baristaskill.vn/uploads/'
 
 Vue.prototype.$defaultTile = 'Trung tâm đào tạo pha chế Barista Skills'
 

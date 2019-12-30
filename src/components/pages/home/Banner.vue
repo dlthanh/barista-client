@@ -19,8 +19,8 @@
             </div>
 
             <div class="btn-group">
-                <a href="javascript:;" class="btn btnRed">Đăng ký ngay</a>
-                <router-link :to="'#'" class="btn btnGray">Xem chi tiết</router-link>
+                <a href="javascript:void(0);" class="btn btnRed">Đăng ký ngay</a>
+                <router-link :to="'about'" class="btn btnGray">Xem chi tiết</router-link>
             </div>
 
             <!-- <div class="hero-list">
@@ -44,16 +44,16 @@
 export default {
     data() {
         return {
-            swiperHeroOption: {
-                speed: 600,
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            swiperHeroSlides: [
-                {thumb: 'hero-1.jpg', title: 'Khóa học trà sữa', description: 'Được đào tạo bài bản tư duy và quy trình pha chế trà sữa chuẩn Đài Loan'},
-                {thumb: 'hero-2.jpg', title: 'Khóa học nâng cao', description: 'Bạn đã có kiến thức cơ bản về Pha chế và muốn học chuyên sâu để nâng cao trình độ'},
-                {thumb: 'hero-3.jpg', title: 'Khóa học trà chanh', description: 'Xu hướng Trà chanh thế hệ mới với không gian sang chảnh theo mô hình “trà sữa”, giá vỉa hè: cost thấp nhưng vẫn đảm bảo chất lượng tối ưu.'},
-            ]
+            // swiperHeroOption: {
+            //     speed: 600,
+            //     slidesPerView: 3,
+            //     spaceBetween: 30,
+            // },
+            // swiperHeroSlides: [
+            //     {thumb: 'hero-1.jpg', title: 'Khóa học trà sữa', description: 'Được đào tạo bài bản tư duy và quy trình pha chế trà sữa chuẩn Đài Loan'},
+            //     {thumb: 'hero-2.jpg', title: 'Khóa học nâng cao', description: 'Bạn đã có kiến thức cơ bản về Pha chế và muốn học chuyên sâu để nâng cao trình độ'},
+            //     {thumb: 'hero-3.jpg', title: 'Khóa học trà chanh', description: 'Xu hướng Trà chanh thế hệ mới với không gian sang chảnh theo mô hình “trà sữa”, giá vỉa hè: cost thấp nhưng vẫn đảm bảo chất lượng tối ưu.'},
+            // ]
         }
     }
 }

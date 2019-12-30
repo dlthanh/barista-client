@@ -39,7 +39,7 @@ export default {
         'home-video': Video,
         'home-comment': Comment
     },
-    mounted() {
+    beforeCreate() {
         document.title = 'Trang chủ | ' + this.$defaultTile
     }
 }

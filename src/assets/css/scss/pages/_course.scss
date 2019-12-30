@@ -154,7 +154,7 @@
     &-description {
         margin-top: get-vw(80px);
         background: url('/src/assets/images/course-item-1.jpg') no-repeat left center;
-        background-size: auto 100%;
+        background-size: auto 100%!important;
         height: get-vw(525px);
         position: relative;
         &::after {
@@ -260,6 +260,9 @@
             padding: 25px percentage(200 / 1200);
             display: flex;
             justify-content: space-between;
+            &.hidden {
+                display: none;
+            }
             &:visible {
                 border-bottom: none;
             }

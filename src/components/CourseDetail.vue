@@ -27,7 +27,7 @@
                 <img :src="require('../assets/images/endow.png')" alt="">
             </div>
 
-            <div class="cdetail-description">
+            <div class="cdetail-description" :style="'background: url(' + $asset + course.thumbnail + ') no-repeat'">
                 <div class="cdetail-description--wrapper container">
                     {{course.description}}
                 </div>
@@ -70,7 +70,7 @@
                     <div class="cdetail-main--title">Nội Dung Khóa Học</div>
 
                     <div class="cdetail-main--list">
-                        <div class="cdetail-main--item" v-for="(item, index) in course.content" :key="index">
+                        <div class="cdetail-main--item" v-for="(item, index) in course.content" :key="index" :class="{hidden: index > 2}">
                             <div class="cdetail-main--item__position">{{index < 9 ? '0' + (index + 1) : index}}</div>
 
                             <div class="cdetail-main--item__info">
@@ -80,13 +80,13 @@
                         </div>
                     </div>
 
-                    <div class="btn-group">
-                        <a href="javascript:;" class="btn btnViewMore">Xem thêm</a>
+                    <div class="btn-group" v-if="course.content.length > 3">
+                        <a href="javascript:;" class="btn btnViewMore" @click="viewMore">Xem thêm</a>
                     </div>
                 </div>
             </div>
 
-            <div class="cdetail-teacher">
+            <div class="cdetail-teacher" v-if="teachers.length > 0">
                 <div class="cdetail-teacher--wrapper container">
                     <div class="cdetail-teacher--title">Giảng Viên Khóa Học</div>
                     <p class="cdetail-teacher--description">Đội ngũ giảng viên giàu kinh nghiệm</p>
@@ -179,6 +179,15 @@ export default {
     },
     mounted() {
         document.title = 'Chi tiết khóa học | ' + this.$defaultTile
+    },
+    methods: {
+        viewMore: function() {
+            let sessionItems = document.getElementsByClassName('cdetail-main--item');
+            for (let i = 0; i < sessionItems.length; i++) {
+                sessionItems[i].classList.remove('hidden')
+            }
+            event.target.style.display = "none";
+        }
     }
 }
 </script>
