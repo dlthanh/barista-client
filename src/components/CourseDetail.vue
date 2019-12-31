@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="btn-group" v-if="course.content.length > 3">
+                    <div class="btn-group" v-if="course.content !== null && course.content.length > 3">
                         <a href="javascript:;" class="btn btnViewMore" @click="viewMore">Xem thêm</a>
                     </div>
                 </div>
