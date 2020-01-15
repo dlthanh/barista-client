@@ -4,7 +4,7 @@
             <img :src="require('../assets/images/banner.jpg')" alt="">    
 
             <div class="banner-content">
-                <h1>Về <span>Barista Skill</span></h1>
+                <h1>Về <span>Barista Skills</span></h1>
 
                 <p>Barista Skills tự hào là một trong những đơn vị cung cấp khóa học pha chế <br /> đồ uống chuyên nghiệp, uy tín nhất tại Hà Nội</p>
             </div>

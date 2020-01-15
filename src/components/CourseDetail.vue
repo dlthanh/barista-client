@@ -28,9 +28,7 @@
             </div>
 
             <div class="cdetail-description" :style="'background: url(' + $asset + course.thumbnail + ') no-repeat'">
-                <div class="cdetail-description--wrapper container">
-                    {{course.description}}
-                </div>
+                <div class="cdetail-description--wrapper container" v-html="course.description"></div>
             </div>
 
             <div class="cdetail-more">
