@@ -19,7 +19,7 @@
                         <router-link :to="{name: 'course'}" class="btn"><i class="fal fa-chevron-left"></i> Các khóa học khác</router-link>
                         <router-link :to="'/#'" class="btn btnRed" @click="scrollToContact">Đăng ký ngay</router-link>
                     </div>
-                    <p class="cdetail-info--note">* Khóa học gồm {{course.session}} buổi học x {{course.time}} tiếng mỗi buổi. Hãy đảm bảo bạn sắp xếp được thời gian.</p>
+                    <p class="cdetail-info--note">* Khóa học gồm {{course.session}} buổi học x {{course.time}} tiếng mỗi buổi. Thời gian linh động cùng các lớp học cấp tốc được mở theo nhu cầu.</p>
                 </div>
             </div>
 
@@ -28,15 +28,13 @@
             </div>
 
             <div class="cdetail-description" :style="'background: url(' + $asset + course.thumbnail + ') no-repeat'">
-                <div class="cdetail-description--wrapper container">
-                    {{course.description}}
-                </div>
+                <div class="cdetail-description--wrapper container" v-html="course.description"></div>
             </div>
 
             <div class="cdetail-more">
                 <div class="cdetail-more--wrapper container">
-                    <div class="cdetail-more--title">Lí Do Bạn Nên Tham Gia Khóa Học Nâng Cao</div>
-                    <p class="cdetail-more--description">Khóa học Pha chế nâng cao sẽ mang đến những trải nghiệm hoàn toàn khác</p>
+                    <div class="cdetail-more--title">Lí Do Bạn Nên Tham Gia <span style="text-transform: capitalize;">{{course.title}}</span> Nâng Cao</div>
+                    <p class="cdetail-more--description">Khóa học pha chế chuyên sâu sẽ mang đến cho bạn những trải nghiệm hoàn toàn khác</p>
 
                     <div class="cdetail-more--video">
                         <iframe :src="'https://www.youtube.com/embed/' + course.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -57,6 +55,8 @@
                                 <img :src="assetUrl + item.filename" alt="">
                             </div>
                         </swiper-slide>
+                        <div class="swiper-button-prev" slot="button-prev"></div>
+                        <div class="swiper-button-next" slot="button-next"></div>
                     </swiper>
 
                     <div class="btn-group">
@@ -112,7 +112,7 @@
                             <div class="cdetail-material--thumb">
                                 <img :src="require('../assets/images/material-1.jpg')" alt="">
                             </div>
-                            <div class="cdetail-material--name">Thực hành không giới hạn</div>
+                            <div class="cdetail-material--name">Thực hành <br /> không giới hạn</div>
                         </div>
 
                         <div class="cdetail-material--item">
@@ -126,7 +126,7 @@
                             <div class="cdetail-material--thumb">
                                 <img :src="require('../assets/images/material-3.jpg')" alt="">
                             </div>
-                            <div class="cdetail-material--name">Giảng viên nhiệt tính, giàu kinh nghiệm</div>
+                            <div class="cdetail-material--name">Giảng viên nhiệt tình, giàu kinh nghiệm</div>
                         </div>
 
                         <div class="cdetail-material--item">
@@ -153,7 +153,12 @@ export default {
             teachers: '',
             swiperGalleryOption: {
                 slidesPerView: 3,
-                spaceBetween: 20
+                spaceBetween: 20,
+                autoHeight: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             },
             swiperGallerySlides: '',
         }

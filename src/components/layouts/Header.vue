@@ -18,7 +18,7 @@
             <div class="header-right">
                 <ul>
                     <li>Email: {{contact.email}}</li>
-                    <li>Hotline: {{contact.phone_first}}</li>
+                    <li>Hotline: {{contact.phone_second}}</li>
                 </ul>
             </div>
         </div>

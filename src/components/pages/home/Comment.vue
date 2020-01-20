@@ -37,14 +37,9 @@ export default {
                 slidesPerView: 1
             },
             commentList: [
-                {avatar: '', name: 'Nguyễn Hà Phương 1', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 2', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 3', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 4', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 5', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 6', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 7', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
-                {avatar: '', name: 'Nguyễn Hà Phương 8', jobtitle: 'Barista', comment: 'Gà Phê - Số 7, ngõ 20, Thái Hà, Đống Đa, Hà Nội. Mức giá trung bình : 35.000 - 45.000 Gà Phê là một quán cafe khá nổi và thu hút trên mạng xã hội hiện nay vì mang hình ảnh đầy'},
+                {avatar: '', name: 'Nguyễn Hà Phương', jobtitle: 'Barista', comment: 'Chuyên nghiệp và giàu kinh nghiệm là điều mà tôi muốn nói về BaristaSkills'},
+                {avatar: '', name: 'Trần Minh Hà', jobtitle: 'Barista', comment: 'Mình có đăng ký một khóa học pha chế tổng hợp tại BaristaSkills do mình có định hướng mở một quán café của riêng mình và khóa học này thực sự đáp ứng đầy đủ những yêu cầu của mình. Tất cả các món được giảng dạy đều bắt kịp xu thế của…'},
+                {avatar: '', name: 'Đỗ Đình Huy', jobtitle: 'Barista', comment: 'Hì mình đã từng theo đuổi………. À không theo học pha chế ở đây. Điều mình ấn tượng đó chính là các anh dạy pha chế ở đay không những cute, chu đáo mà chuyên môn còn rất cao nữa. Mình đã từng thử một vài điểm dạy về pha chế trước đó nhưng khi…'},
             ],
             commentRange: null,
             commentListMount: []

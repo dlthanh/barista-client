@@ -12,7 +12,7 @@ export default {
     data() {
         return {
             contact: {
-                email: 'lophocphache@gmail.com',
+                email: 'infor@baristaskills.vn',
                 phone_first: '0904 055 852',
                 phone_second: '0971 055 852',
                 phone_third: '0962 056 852',

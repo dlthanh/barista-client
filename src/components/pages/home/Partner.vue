@@ -23,7 +23,7 @@ export default {
                 spaceBetween: 30,
             },
             swiperPartnerSlides: [
-                'royaltea.png', 'TCH.png', 'gong-cha.png', 'alley.png', 'highland.png'
+                'royaltea.png', 'gong-cha.png', 'ipos.jpg', 'bms.jpg', 'Nuovasimonelli.jpg'
             ],
         }
     }

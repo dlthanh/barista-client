@@ -140,6 +140,9 @@
             align-items: center;
             justify-content: space-around;
             height: auto;
+            img {
+                max-width: 70%;
+            }
         }
     }
 
