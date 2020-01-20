@@ -52,7 +52,7 @@
         <div class="footer-copyright container">
             <img src="../../assets/images/logo.svg" alt="">
 
-            <p>&copy; Bản quyền thuộc về Trung tâm đào tạo pha chế chuyên nghiệp Barista Skills | Cung cấp bởi FatBirds Creative Agency</p>
+            <p>&copy; Bản quyền thuộc về Trung tâm đào tạo pha chế chuyên nghiệp Barista Skills | Cung cấp bởi BMS Agency</p>
         </div>
     </footer>
 </template>

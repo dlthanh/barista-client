@@ -22,6 +22,7 @@ export default {
         this.$http.get(this.$api + '/courses/' + month + '/' + year)
                     .then(response => {
                         this.getCalendar = response.data;
+                        console.log(year);
                         return this.getCalendar;
                     })
     }
